@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Button, Input, Stack, useTheme } from "@mui/material";
+import { Button, Input, useTheme } from "@mui/material";
+import StickyNote from "./components/StickyNote";
 
 function App() {
   const [todos, setTodos] = useState<string[]>([]);
@@ -55,20 +56,9 @@ function App() {
           Add
         </Button>
       </div>
-      <Stack
-        direction="column"
-        alignItems="center"
-        spacing={2}
-        // justifyContent="space-between"
-        // width={300}
-      >
-        {todos.map((todo, index) => (
-          <Stack key={index} direction="row" spacing={1}>
-            <div>{todo}</div>
-            <button onClick={() => handleRemoveTodo(index)}>Remove</button>
-          </Stack>
-        ))}
-      </Stack>
+      {<StickyNote todos={todos} handleRemoveTodo={handleRemoveTodo} />}
+
+      {/* {todos && todos.length > 0 ? <StickyNote todos={todos} handleRemoveTodo={handleRemoveTodo} /> : null} */}
     </header>
   );
 }
