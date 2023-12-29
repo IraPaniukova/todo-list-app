@@ -1,9 +1,9 @@
-import React from "react";
-import Draggable from "react-draggable";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Button from "@mui/material/Button";
+import React from 'react';
+import Draggable from 'react-draggable';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
 
 type StickyNoteProps = {
   todos: string[];
@@ -15,12 +15,12 @@ const StickyNote: React.FC<StickyNoteProps> = ({ todos, handleRemoveTodo }) => {
     <Draggable>
       <List
         sx={{
-          width: "260px",
-          height: "200px",
-          background: "#FFFF88",
-          color: "#3f306a",
-          fontSize: "14px",
-          fontStyle: "italic",
+          width: '260px',
+          height: '200px',
+          background: '#FFFF88',
+          color: '#3f306a',
+          fontSize: '14px',
+          fontStyle: 'italic',
         }}
       >
         {todos.map((todo, index) => (
