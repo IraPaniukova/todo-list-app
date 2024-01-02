@@ -29,7 +29,13 @@ export const AddTodos: React.FC<AddTodosProps> = ({
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
       />
-      <Button variant="outlined" onClick={handleAddTodo}>
+      <Button
+        variant="outlined"
+        onClick={handleAddTodo}
+        sx={{
+          color: pinkTheme.palette.secondary.light,
+        }}
+      >
         Add
       </Button>
     </div>

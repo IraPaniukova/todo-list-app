@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import StickyNote from './components/StickyNote';
 import { AddTodos } from './components/AddTodos';
@@ -6,20 +6,21 @@ import { AddTodos } from './components/AddTodos';
 function App() {
   const [todos, setTodos] = useState<string[]>([]);
   const [newTodo, setNewTodo] = useState<string>('');
+  // const [todoLists, setTodoLists] = useState<string[][]>([]);
 
   // Load TODOs from local storage on app startup
-  useEffect(() => {
-    const storedList = localStorage.getItem('todos');
-    const storedTodos = storedList ? JSON.parse(storedList) : [];
-    if (storedTodos) {
-      setTodos(storedTodos);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedList = localStorage.getItem('todos');
+  //   const storedTodos = storedList ? JSON.parse(storedList) : [];
+  //   if (storedTodos) {
+  //     setTodos(storedTodos);
+  //   }
+  // }, []);
 
-  // Update local storage whenever TODOs change
-  useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
-  }, [todos]);
+  // // Update local storage whenever TODOs change
+  // useEffect(() => {
+  //   localStorage.setItem('todos', JSON.stringify(todos));
+  // }, [todos]);
 
   const handleAddTodo = () => {
     if (newTodo.trim() !== '') {
@@ -32,6 +33,9 @@ function App() {
     const newTodoList = todos.filter((_, i) => i !== index);
     setTodos(newTodoList);
   };
+  // const handleAddTodoList =()=>{
+
+  // }
 
   return (
     <header className="App-header">
