@@ -1,0 +1,20 @@
+.stickyList {
+  box-shadow: 2px 5px 5px 3px rgba(0, 0, 0, 0.2);
+  width: 260px;
+  height: 200px;
+  background: #ffff88;
+  color: #3f306a;
+  font-size: 14px;
+  font-style: italic;
+  overflow: auto;
+}
+.stickyList::-webkit-scrollbar {
+  width: 0.5em;
+}
+.stickyList::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.stickyList::-webkit-scrollbar-thumb {
+  background-color: #cddc39;
+  outline: 1px solid slategrey;
+}
